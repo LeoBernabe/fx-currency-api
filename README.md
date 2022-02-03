@@ -1,6 +1,9 @@
 # Instructions
 ## Introduction 
 * The Rest API is written in Java Spring Boot Framework, It designs to calculate the currency rate and to get the latest rates.
+## Assumptions/Considerations:
+1. Created Account in exchangeratesapi.io, used the free plan and generated access key.
+2. Since the subscription plan is free there will be a limited access to the API, like the base currency only allows EUR.
 ## Clone the public repository
 `git clone https://github.com/LeoBernabe/fx-currency-api.git`
 ## Run the project
@@ -59,3 +62,9 @@ note: `base` param only accepts EUR currency due to the subscription plan
 ```
 
 note: `buyCurrency` param only accepts EUR currency due to the subscription plan
+## Assumptions/Considerations:
+1. Placed the access key and api url in application.properties
+2. Use Latest Rates Endpoint to get all currencies and rates
+3. The get currency rate result endpoint only allows EUR for the buyCurrency parameter due to the limited access for the free plan.
+4. Implemented Unit test for the service layer and achieved 100% code coverage
+5. Retrieve the latest exchange rate using Latest Rates API before converting the input amount
